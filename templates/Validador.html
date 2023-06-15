@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabela de Clientes</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabela de Clientes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Flags</th>
+                <th>Nome</th>
+                <th>Saldo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cliente in dados_clientes %}
+            <tr>
+                <td>{{ cliente.id }}</td>
+                <td>{{ cliente.flags }}</td>
+                <td>{{ cliente.nome }}</td>
+                <td>{{ cliente.saldo }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
